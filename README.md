@@ -14,14 +14,16 @@ Summary: Computes mutual information matrices from continuous, categorical and s
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/r-mrmre-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/r-mrmre-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/r-mrmre-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/r-mrmre-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/r-mrmre-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/r-mrmre-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-mrmre-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-mrmre-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/r-mrmre-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-mrmre-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-mrmre-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-mrmre-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mrmre/badges/version.svg)](https://anaconda.org/conda-forge/r-mrmre)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/r-mrmre/badges/downloads.svg)](https://anaconda.org/conda-forge/r-mrmre)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-r--mrmre-green.svg)](https://anaconda.org/conda-forge/r-mrmre) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/r-mrmre.svg)](https://anaconda.org/conda-forge/r-mrmre) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/r-mrmre.svg)](https://anaconda.org/conda-forge/r-mrmre) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/r-mrmre.svg)](https://anaconda.org/conda-forge/r-mrmre) |
 
 Installing r-mrmre
 ==================
