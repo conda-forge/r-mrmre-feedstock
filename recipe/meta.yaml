@@ -25,18 +25,18 @@ build:
 
 requirements:
   build:
+    - posix                # [win]
+    - {{native}}toolchain  # [win]
+    - {{ compiler('c')     # [not win]
+  host:
     - r-base
     - r-igraph
     - r-survival
-    - posix                # [win]
-    - {{native}}toolchain  # [win]
-    - gcc                  # [not win]
-
   run:
     - r-base
     - r-igraph
     - r-survival
-    - libgcc  # [not win]
+
 
 test:
   commands:
