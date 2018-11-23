@@ -27,7 +27,7 @@ requirements:
   build:
     - posix                # [win]
     - {{native}}toolchain  # [win]
-    - {{ compiler('c')     # [not win]
+    - {{ compiler('c') }}  # [not win]
   host:
     - r-base
     - r-igraph
