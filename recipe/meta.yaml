@@ -54,11 +54,4 @@ about:
   license_family: OTHER
 extra:
    recipe-maintainers:
-    - MathiasHaudgaard
-    - FrodePedersen
-    - ArneKr
-    - johanneskoester
-    - bgruening
-    - daler
-    - jdblischak
     - conda-forge/r
