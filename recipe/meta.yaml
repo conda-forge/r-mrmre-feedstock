@@ -10,12 +10,13 @@ package:
 source:
   fn: mRMRe_{{ version }}.tar.gz
   url:
-    - https://cran.r-project.org/src/contrib/mRMRe_{{ version }}.tar.gz
-    - https://cran.r-project.org/src/contrib/Archive/mRMRe/mRMRe_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/mRMRe_{{ version }}.tar.gz
+    - {{ cran_mirror }}/src/contrib/Archive/mRMRe/mRMRe_{{ version }}.tar.gz
 
   sha256: d6e1a91774cc62f762e8af537ed68fb29eeb96152e7fabf3b668110fafbc4ada
 
 build:
+  merge_build_host: True  # [win]
   number: 1001
   rpaths:
     - lib/R/lib/
@@ -25,13 +26,15 @@ requirements:
   build:
     - posix                # [win]
     - {{native}}toolchain  # [win]
-    - {{ compiler('c') }}  # [not win]
-    - {{ compiler('cxx') }}  # [not win]
+    - {{ compiler('c') }}        # [linux or osx and c_compiler == "toolchain_c"]
+    - {{ compiler('cxx') }}      # [linux or osx and c_compiler == "toolchain_c"]
   host:
     - r-base
     - r-igraph
     - r-survival
   run:
+    - libcxx                # [osx and c_compiler == "clang"]
+    - llvm-openmp           # [osx and c_compiler == "clang"]
     - r-base
     - r-igraph
     - r-survival
