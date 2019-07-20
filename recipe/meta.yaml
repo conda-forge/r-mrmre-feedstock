@@ -17,7 +17,7 @@ source:
 
 build:
   merge_build_host: True  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,7 +25,8 @@ build:
 requirements:
   build:
     - posix                # [win]
-    - {{native}}toolchain  # [win]
+    - {{ compiler('m2w64_c') }}  # [win]
+    - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ compiler('c') }}        # [linux or osx and c_compiler == "toolchain_c"]
     - {{ compiler('cxx') }}      # [linux or osx and c_compiler == "toolchain_c"]
   host:
