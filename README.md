@@ -57,31 +57,17 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2008r_base3.5.1</td>
+              <td>win_r_base3.5.1</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4257&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mrmre-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008r_base3.5.1" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mrmre-feedstock?branchName=master&jobName=win&configuration=win_r_base3.5.1" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>win_c_compilervs2008r_base3.6</td>
+              <td>win_r_base3.6</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4257&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mrmre-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2008r_base3.6" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_c_compilervs2015r_base3.5.1</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4257&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mrmre-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015r_base3.5.1" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>win_c_compilervs2015r_base3.6</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=4257&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mrmre-feedstock?branchName=master&jobName=win&configuration=win_c_compilervs2015r_base3.6" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-mrmre-feedstock?branchName=master&jobName=win&configuration=win_r_base3.6" alt="variant">
                 </a>
               </td>
             </tr>
