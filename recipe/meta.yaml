@@ -16,8 +16,8 @@ source:
   sha256: fe23c5c1e7b5b653e0358e98f25ebd8c0c74c6c871606d1b24cd02a5534181d4
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -47,10 +47,10 @@ test:
 about:
   home: https://cran.r-project.org/web/packages/mRMRe/index.html
   license: Artistic-2.0
-  summary: Computes mutual information matrices from continuous, categorical and survival variables,
-    as well as feature selection with minimum redundancy, maximum relevance (mRMR) and
-    a new ensemble mRMR technique.
+  summary: Computes mutual information matrices from continuous, categorical and survival variables, as well as feature selection with minimum redundancy, maximum relevance (mRMR) and a new ensemble mRMR technique.
   license_family: OTHER
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/Artistic-2.0
 extra:
-   recipe-maintainers:
+  recipe-maintainers:
     - conda-forge/r
