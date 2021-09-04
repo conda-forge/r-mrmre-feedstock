@@ -1,4 +1,4 @@
-{% set version = "2.1.1" %}
+{% set version = "2.1.2" %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -13,7 +13,7 @@ source:
     - {{ cran_mirror }}/src/contrib/mRMRe_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mRMRe/mRMRe_{{ version }}.tar.gz
 
-  sha256: 0f30a5d8d11ebb52b3275d0950901efc232fc4640fcc0e92ebb16fbaac66f5de
+  sha256: a59a3cb3cca89f51d9ee6702cd479fd7db8bc2e25b72f45cb6712da983777ca0
 
 build:
   merge_build_host: true  # [win]
