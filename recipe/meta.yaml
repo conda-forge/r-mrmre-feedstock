@@ -1,34 +1,38 @@
 {% set version = "2.1.2.1" %}
-
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-mrmre
   version: {{ version|replace("-", "_") }}
 
 source:
-  fn: mRMRe_{{ version }}.tar.gz
   url:
     - {{ cran_mirror }}/src/contrib/mRMRe_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mRMRe/mRMRe_{{ version }}.tar.gz
-
   sha256: d53c392e82a437005b71d0e8b97350d0237608fffafe087700fe7f6770167fd9
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-    - posix                # [win]
-    - {{ compiler('m2w64_c') }}  # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
+    - r-igraph                     # [build_platform != target_platform]
+    - r-survival                   # [build_platform != target_platform]
+    - {{ compiler('c') }}          # [not win]
+    - {{ stdlib("c") }}            # [not win]
+    - {{ compiler('m2w64_c') }}    # [win]
+    - {{ stdlib("m2w64_c") }}      # [win]
+    - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
-    - {{ compiler('c') }}        # [not win]
-    - {{ compiler('cxx') }}      # [not win]
+    - {{ posix }}filesystem        # [win]
+    - {{ posix }}make
+    - {{ posix }}sed               # [win]
+    - {{ posix }}coreutils         # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-igraph
@@ -38,19 +42,19 @@ requirements:
     - r-igraph
     - r-survival
 
-
 test:
   commands:
-    - $R -e "library('mRMRe')"  # [not win]
+    - $R -e "library('mRMRe')"           # [not win]
     - "\"%R%\" -e \"library('mRMRe')\""  # [win]
 
 about:
-  home: https://cran.r-project.org/web/packages/mRMRe/index.html
+  home: https://cran.r-project.org/package=mRMRe
   license: Artistic-2.0
   summary: Computes mutual information matrices from continuous, categorical and survival variables, as well as feature selection with minimum redundancy, maximum relevance (mRMR) and a new ensemble mRMR technique.
   license_family: OTHER
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/Artistic-2.0
+
 extra:
   recipe-maintainers:
     - conda-forge/r
