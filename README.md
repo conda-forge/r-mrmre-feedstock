@@ -7,7 +7,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-mrmre-feedsto
 About r-mrmre
 -------------
 
-Home: https://cran.r-project.org/web/packages/mRMRe/index.html
+Home: https://cran.r-project.org/package=mRMRe
 
 Package license: Artistic-2.0
 
@@ -16,7 +16,7 @@ Summary: Computes mutual information matrices from continuous, categorical and s
 About r-mrmre
 -------------
 
-Home: https://cran.r-project.org/web/packages/mRMRe/index.html
+Home: https://cran.r-project.org/package=mRMRe
 
 Package license: Artistic-2.0
 
