@@ -1,4 +1,4 @@
-{% set version = "2.1.2.2" %}
+{% set version = "2.1.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mRMRe_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mRMRe/mRMRe_{{ version }}.tar.gz
-  sha256: 1d2c3b53a6ecfa61f4891e08114d6951ebb7a9830c934515406e180277339209
+  sha256: 73357bf581273054574d0f9f78b8cb4cfd5dac55581d704701283dfdbfd84ceb
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
